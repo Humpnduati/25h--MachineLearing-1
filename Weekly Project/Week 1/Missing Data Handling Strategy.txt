@@ -1,0 +1,44 @@
+ Missing Data Handling Strategy
+
+Rationale for Column Dropping:
+
+FP16/32/64 GFLOPS columns: These columns showed >99% missing values, making them statistically insignificant for analysis. Keeping them would introduce noise without adding value while potentially complicating the analysis.
+
+Rationale for Imputation Methods:
+
+Categorical variables: Used mode imputation because:
+
+It preserves the most common category without changing the distribution
+
+It's appropriate for nominal data where mean/median don't apply
+
+For low missingness (<30%), it doesn't significantly distort the data
+
+Numerical variables: Used median imputation because:
+
+Median is robust to outliers, which are common in semiconductor performance metrics
+
+Unlike mean, median won't be skewed by extreme values in power consumption or transistor counts
+
+For the specific semiconductor context, median represents a typical value better than mean
+
+ Data Type Conversion Rationale
+
+Numerical Data Conversion:
+
+Explicit conversion using pd.to_numeric() with errors='coerce' ensures that:
+
+All numerical values are properly recognized as numbers
+
+Any non-numeric entries are converted to NaN for proper handling
+
+This prevents the "string division" error that occurred in the Dennard Scaling analysis
+
+Date Parsing Strategy:
+
+Multiple date format attempts ensure compatibility with various date representations in the dataset
+
+The fallback to NaT for unparseable dates maintains data integrity while allowing analysis to continue
+
+Year extraction enables time-series analysis critical for validating Moore's Law and other temporal trends
+
