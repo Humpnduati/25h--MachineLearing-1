@@ -1,6 +1,0 @@
-Category,Count,Default_Rate,Min_Score,Max_Score,Avg_Score,Avg_Default_Prob
-Excellent,20836,1.0,750.05,850.0,824.61,1.0
-Fair,634,4.0,650.05,699.85,677.84,3.0
-Good,1093,4.0,700.02,749.99,727.68,2.0
-Poor,439,4.0,600.03,649.96,626.62,4.0
-Very Poor,2513,12.0,300.0,599.99,386.93,13.0
