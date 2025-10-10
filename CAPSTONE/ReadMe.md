@@ -1,9 +1,17 @@
 F1 Race Strategy Machine Learning System
+
+
 🏎️ Project Overview
+
 A comprehensive machine learning pipeline for Formula 1 race strategy optimization, featuring real-time weather integration, advanced feature engineering, and predictive modeling for race performance and strategic decision-making.
 
+
+
 📋 Problem Statement
+
+
 Core Challenge
+
 Predict optimal race strategies in Formula 1 by analyzing historical performance data, real-time weather conditions, circuit characteristics, and team/driver capabilities to maximize race position gains and points scoring.
 
 Key Objectives
